@@ -1,0 +1,183 @@
+        <!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item"><a href="javascript:;">Dashboard</a></li>
+				<li class="breadcrumb-item active">Dashboard v2</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Admin Dashboard</small></h1>{{admin.firstname}}
+			{{> flash}}
+			<!-- end page-header -->
+			<!-- begin row -->
+			<div class="row">
+			    <!-- begin col-3 -->
+				{{#if mainAdmin}}
+			    <div class="col-lg-3 col-md-6">
+			        <div class="widget widget-stats bg-gradient-teal">
+						<div class="stats-icon stats-icon-lg"><i class="fa fa-dollar-sign fa-fw"></i></div>
+			        	<div class="stats-content">
+							<div class="stats-title">BEWLA BALLANCE</div>
+							<div class="stats-number"> &#8358; {{adminWallet.ballance}}</div>
+							<div class="stats-progress progress">
+								<div class="progress-bar" style="width: 70.1%;"></div>
+							</div>							
+							<div class="stats-desc"><a href="#modal-dialog" class="btn btn-white btn-lg btn-block" data-toggle="modal">Generate Fund</a></div>
+							
+							<!-- #modal-dialog -->
+							<div class="modal fade" id="modal-dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title">Generate Fund</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										</div>
+										<div class="modal-body">
+											<form action="admins/gen-funds" method="POST" class="margin-bottom-0">
+												<div class="form-group m-b-20">
+													<label for="remember_checkbox">
+														Enter Amount 
+													</label>
+													<input type="number" name="gen_amount" class="form-control form-control-lg" placeholder="Email Amount" required />
+												</div>
+												<div class="form-group m-b-20">
+													<label for="remember_checkbox">
+														Type a remark for this generation 
+													</label>
+													<textarea name="remark" class="form-control form-control-lg" placeholder="Enter remark for this funds generation" rows="3"></textarea>
+												</div>
+												<div class="checkbox checkbox-css m-b-20">
+													<input type="checkbox" id="remember_checkbox" /> 
+													<label for="remember_checkbox">
+														Acknowledge action 
+													</label>
+												</div>
+												<div class="login-buttons">
+													<button type="submit" class="btn btn-success btn-block btn-lg">Generate</button>
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<a href="javascript:;" class="btn btn-white btn-block btn-lg" data-dismiss="modal">Cancel</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			        </div>
+			    </div>
+				{{/if}}
+			    <!-- end col-3 -->
+			</div>
+			<!-- end row -->
+
+			<div class="row">
+				
+			</div>
+			
+			<!-- begin row -->
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="panel panel-inverse" data-sortable-id="ui-widget-2">
+						<div class="panel-heading ui-sortable-handle">
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-success btn-xs">Action</button>
+								<button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="javascript:;">Users</a></li>
+									<li><a href="javascript:;">Managers</a></li>
+									<li><a href="javascript:;">Agents</a></li>
+									<li class="divider"></li>
+									<li><a href="javascript:;">All Accounts</a></li>
+								</ul>
+							</div>
+							<h4 class="panel-title">Registered Users</h4>
+						</div>
+						<div class="panel-body">
+							<p>Panel Content Here</p>
+						</div>
+						<div class="hljs-wrapper">
+						
+						</div>
+					</div>
+				</div>
+			    <!-- begin col-4 -->
+			    <div class="col-lg-4">
+			        <!-- begin panel -->
+			        <div class="panel panel-inverse" data-sortable-id="index-4">
+			            <div class="panel-heading">
+			                <h4 class="panel-title">New Registered Users <span class="pull-right label bg-gradient-teal">24 new users</span></h4>
+			            </div>
+                        <ul class="registered-users-list clearfix">
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-5.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Savory Posh
+                                    <small>Algerian</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-3.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Ancient Caviar
+                                    <small>Korean</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-1.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Marble Lungs
+                                    <small>Indian</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-8.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Blank Bloke
+                                    <small>Japanese</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-2.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Hip Sculling
+                                    <small>Cuban</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-6.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Flat Moon
+                                    <small>Nepalese</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-4.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Packed Puffs
+                                    <small>Malaysian></small>
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="./assets/img/user/user-9.jpg" alt="" /></a>
+                                <h4 class="username text-ellipsis">
+                                    Clay Hike
+                                    <small>Swedish</small>
+                                </h4>
+                            </li>
+                        </ul>
+			            <div class="panel-footer text-center">
+			                <a href="javascript:;" class="text-inverse">View All</a>
+			            </div>
+			        </div>
+			        <!-- end panel -->
+			    </div>
+			    <!-- end col-4 -->
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end #content -->
+		
